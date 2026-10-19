@@ -1,0 +1,42 @@
+# Fanobase collaborators — basic information, ordered alphabetically by surname.
+# Fields: name, affiliation, url (all optional except name).
+
+- name: Pieter Belmans
+  affiliation: Utrecht University
+  url: https://pbelmans.ncag.info
+
+- name: Vladimiro Benedetti
+  affiliation: Université Côte d'Azur
+  url: https://sites.google.com/site/webpagevladimirobenedetti
+
+- name: Francesco Denisi
+  affiliation: Postdoc, Universität des Saarlandes
+  url: https://sites.google.com/view/franden
+
+- name: Enrico Fatighenti
+  affiliation: Università di Bologna
+  url: https://sites.google.com/view/enricofatighenti/home
+
+- name: Javier Fernández Píriz
+  affiliation: University of Luxembourg
+  url: https://www.uni.lu/fstm-en/people/javier-fernandez-piriz/
+
+- name: Alessandro Frassineti
+  affiliation: Università di Genova
+  url: https://sites.google.com/view/alessandrofrassineti-math/home-page
+
+- name: Laurent Manivel
+  affiliation: CNRS — Institut de Mathématiques de Marseille
+  url: https://manivel.perso.math.cnrs.fr/index.html
+
+- name: Federico Papa
+  affiliation: Università di Bologna
+  url: https://sites.google.com/view/federico-papa/home
+
+- name: Fabio Tanturri
+  affiliation: Università di Genova
+  url: https://www.tanturri.eu/
+
+- name: Federico Tufo
+  affiliation: Università di Bologna
+  url: https://sites.google.com/view/federicotufo/

@@ -1,0 +1,32 @@
+baseURL = "https://blog.fanobase.net/"
+locale = "en-us"
+defaultContentLanguage = "en"
+timeZone = "Europe/Brussels"
+title = "Fanobase blog"
+
+# Self-contained layouts live in ./layouts; no external theme is needed.
+disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[params]
+  description = "News and updates from the Fanobase project."
+  author = "The Fanobase group"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = true
+    style = "github"
+    tabWidth = 2
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+
+[minify]
+  disableJSON = true

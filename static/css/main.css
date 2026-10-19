@@ -1,0 +1,128 @@
+/* Fanobase blog — minimal, blog-first layout.
+   Spirit of hugo-xmin (single centered column, dated post list, light rules),
+   but distinct: narrower measure, system type, no grey pills, one blue accent. */
+
+:root {
+  --text:   #232629;
+  --muted:  #6b7280;
+  --accent: #3a6ea5;   /* the one restrained splash of colour */
+  --accent-strong: #2c5580;
+  --rule:   #e6e8eb;
+  --soft:   #f6f7f8;
+  --bg:     #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; -webkit-text-size-adjust: 100%; }
+
+body {
+  max-width: 46rem;            /* ~720px — narrower than xmin's 800px */
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem 3rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-strong); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---- header / nav ---- */
+.site-header { text-align: center; margin-bottom: 1.75rem; }
+.site-title {
+  font-size: 1.4rem; font-weight: 700; letter-spacing: -0.015em; color: var(--text);
+}
+.site-title:hover { color: var(--accent); text-decoration: none; }
+.site-nav {
+  margin-top: 0.7rem;
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 0.4rem 1.4rem;
+  font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.09em;
+}
+.site-nav a {
+  color: var(--muted); padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+.site-nav a:hover { color: var(--accent); text-decoration: none; }
+.site-nav a.active { color: var(--text); border-bottom-color: var(--accent); }
+.site-header::after {
+  content: ""; display: block; height: 1px; background: var(--rule); margin-top: 1.3rem;
+}
+
+/* ---- headings ---- */
+.page-title, .post-title { font-size: 1.6rem; line-height: 1.25; margin: 0.1em 0 0.4em; letter-spacing: -0.015em; }
+.section-label {
+  font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--muted); font-weight: 600; margin: 2rem 0 0.75rem;
+}
+main h2 { font-size: 1.3rem; margin-top: 2rem; padding-bottom: 0.2em; border-bottom: 1px solid var(--rule); }
+main h3 { font-size: 1.1rem; margin-top: 1.5rem; }
+
+/* ---- GitHub-style linkable headings (see layouts/_default/_markup/render-heading.html) ---- */
+main :is(h1, h2, h3, h4, h5, h6) { position: relative; scroll-margin-top: 1rem; }
+.heading-anchor {
+  position: absolute; right: 100%; margin-right: 0.15em;
+  text-decoration: none; font-weight: 400;
+  color: var(--muted); opacity: 0; transition: opacity 0.12s;
+}
+main :is(h1, h2, h3, h4, h5, h6):hover > .heading-anchor,
+.heading-anchor:focus { opacity: 0.55; }
+.heading-anchor:hover { opacity: 1; }
+
+/* ---- the intro blurb on the homepage ---- */
+.intro { color: var(--text); font-size: 1.05rem; }
+.intro p:first-child { margin-top: 0; }
+
+/* ---- blog list (the centrepiece) ---- */
+.post-list { list-style: none; padding: 0; margin: 0; }
+.post-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--rule); }
+.post-date {
+  display: inline-block; min-width: 6.5em; margin-right: 0.5rem;
+  color: var(--muted); font-size: 0.85rem; font-variant-numeric: tabular-nums;
+}
+.post-link { font-weight: 600; font-size: 1.05rem; }
+.post-summary { margin: 0.3rem 0 0 0; color: var(--muted); font-size: 0.95rem; }
+.post-empty { color: var(--muted); }
+
+/* ---- single post ---- */
+.post-meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.6rem; }
+.post-content p, .page-content p { margin: 0.9em 0; }
+.post-content h2 { font-size: 1.3rem; }
+
+/* ---- collaborators ---- */
+.people { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+.person { padding: 0.95rem 0; border-bottom: 1px solid var(--rule); }
+.person-name { font-weight: 700; font-size: 1.05rem; }
+.person-meta { color: var(--muted); font-size: 0.85rem; margin-top: 0.15rem; }
+.person-meta a { color: var(--accent); }
+
+/* ---- prose elements ---- */
+blockquote { margin: 1.2em 0; padding: 0.4em 1em; background: var(--soft); border-left: 3px solid var(--accent); }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.88em; background: var(--soft); padding: 0.1em 0.35em; border-radius: 4px; }
+pre { background: var(--soft); border: 1px solid var(--rule); border-radius: 8px; padding: 1em; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+img, iframe, video { max-width: 100%; }
+table { border-collapse: collapse; width: 100%; margin: 1.2em 0; }
+th, td { padding: 0.45em 0.6em; border-bottom: 1px solid var(--rule); text-align: left; }
+thead th { border-bottom: 2px solid var(--rule); }
+
+/* ---- footer ---- */
+.site-footer {
+  margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule);
+  text-align: center; color: var(--muted); font-size: 0.8rem;
+}
+
+/* ---- gentle dark mode (accent lightens, stays restrained) ---- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text:   #e6e7e9;
+    --muted:  #9aa1aa;
+    --accent: #7aa6d6;
+    --accent-strong: #a9c6e6;
+    --rule:   #2b2f36;
+    --soft:   #1b1e23;
+    --bg:     #16181c;
+  }
+}

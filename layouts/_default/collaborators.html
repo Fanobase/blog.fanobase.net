@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ with .Content }}<div class="page-content">{{ . }}</div>{{ end }}
+
+  <ul class="people">
+    {{ range hugo.Data.collaborators }}
+      <li class="person">
+        <div class="person-name">
+          {{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
+        </div>
+        {{ with .affiliation }}<div class="person-meta">{{ . }}</div>{{ end }}
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

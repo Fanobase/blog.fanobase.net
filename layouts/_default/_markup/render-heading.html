@@ -1,0 +1,4 @@
+{{- /* GitHub-style linkable headings: an anchor that appears on hover. */ -}}
+<h{{ .Level }} id="{{ .Anchor }}">
+  <a class="heading-anchor" href="#{{ .Anchor }}" aria-label="Link to this section">#</a>{{ .Text | safeHTML }}
+</h{{ .Level }}>
