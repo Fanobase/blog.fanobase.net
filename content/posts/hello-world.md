@@ -2,6 +2,7 @@
 title = "Hello world"
 date = 2026-10-19
 draft = false
+authors = ["Pieter Belmans"]
 +++
 
 Hello!

@@ -7,6 +7,11 @@
       <li>
         <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
         <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ with .Params.authors }}
+          <p class="post-authors">By {{ delimit . ", " " and " }}</p>
+        {{ else }}
+          {{ with .Params.author }}<p class="post-authors">By {{ . }}</p>{{ end }}
+        {{ end }}
         {{ with .Params.summary }}<p class="post-summary">{{ . }}</p>{{ end }}
       </li>
     {{ else }}
