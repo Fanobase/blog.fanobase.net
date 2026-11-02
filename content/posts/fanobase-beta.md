@@ -7,7 +7,7 @@ description = "Introducing Fanobase's type-A beta release: our legacy database, 
 +++
 
 Welcome to the beta version of [Fanobase](https://fanobase.net/)!
-This post introduces the type A data available today, the computations behind it, and the updates planned for the next weeks.
+This post introduces the *[type A data available today](https://type-a.fanobase.net)*, the computations behind it, and the updates planned for the next weeks.
 
 > *Our aim is to collect all Fano fourfolds that can be constructed using homogeneous vector bundles, compute their invariants, and understand their birational geometry.
 > The constructions we will use include zero loci of homogeneous vector bundles on homogeneous varieties of all Lie types, as well as classical and orbital degeneracy loci.*
