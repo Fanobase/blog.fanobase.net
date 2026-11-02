@@ -10,3 +10,5 @@ by
 * compare the different perspectives that exist in the literature
 
 We will be releasing our results as we progress.
+
+* [Fano fourfolds of type A](https://type-a.fanobase.net/)

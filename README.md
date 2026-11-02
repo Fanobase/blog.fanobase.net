@@ -29,6 +29,9 @@ The site is self-contained: no external theme or Node dependencies are needed.
 Create a draft post with `hugo new content posts/post-title.md`, then set
 `draft = false` when it is ready to publish.
 
+Set `authors = ["Pieter Belmans", "Enrico Fatighenti"]` in a post's front matter
+to credit one or more authors in its byline and RSS feeds.
+
 ## Deployment
 
 The [GitHub Pages workflow](.github/workflows/deploy.yml) builds and deploys
