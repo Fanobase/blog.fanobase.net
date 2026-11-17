@@ -1,6 +1,6 @@
 +++
 title = "Fano Tuesday: The importance of being strongly Fano"
-date = 2026-11-06
+date = 2026-11-17
 draft = false
 authors = ["Enrico Fatighenti"]
 description = "A Fano fourfold gives a strongly Fano presentation of the Mori-Mukai threefold 2-18."
