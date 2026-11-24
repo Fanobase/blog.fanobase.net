@@ -16,6 +16,11 @@ buildExpired = false
   author = "The Fanobase group"
 
 [markup]
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      inline = [['$', '$'], ['\(', '\)']]
+      block = [['$$', '$$'], ['\[', '\]']]
   [markup.goldmark.renderer]
     unsafe = true
   [markup.highlight]
